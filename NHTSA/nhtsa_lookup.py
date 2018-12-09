@@ -1,4 +1,4 @@
-"""Get NHTSA detail for a list of VIN# in csv format [VIN, Model Year]"""
+"""Get NHTSA detail for a list of VIN# in csv format [VIN#, Model Year]"""
 import sys, json, csv
 import pandas as pd
 import requests as rq
