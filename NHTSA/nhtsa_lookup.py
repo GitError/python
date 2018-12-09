@@ -1,4 +1,4 @@
-"""Get NHTSA detail for a list of VIN# in csv format [VIN#, Model Year]"""
+"""Decode a list of VIN# (input.csv - vin, model year) into output.csv"""
 import sys, json, csv
 import pandas as pd
 import requests as rq
@@ -14,7 +14,6 @@ def main(argv):
     try:
         vin_list = argv[1] if len(argv) > 1 else DEFAULT_INPUT_FILE
         output = argv[2] if len(argv) > 2 else DEFAULT_OUTPUT_FILE
-
         data = get_vin_details_batch(vin_list, BATCH_SIZE)
         data.to_csv(output, sep=',', header=True, index=False, 
             line_terminator='\n', encoding='UTF-8', quoting=csv.QUOTE_ALL)
