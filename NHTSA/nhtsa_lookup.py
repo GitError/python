@@ -1,20 +1,20 @@
-"""Decode a list of VIN# (input.csv - vin, model year) into output.csv"""
-import sys, json, csv
+import sys, os, json, csv
 import pandas as pd
 import requests as rq
 
 
 NHTSA_API_URL = 'https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/'
-BATCH_SIZE = 5
-DEFAULT_INPUT_FILE = 'input.csv'
-DEFAULT_OUTPUT_FILE = 'output.csv'
+DEFAULT_BATCH_SIZE = 5
+DEFAULT_INPUT_FILE = r'.\input.csv'
+DEFAULT_OUTPUT_FILE = r'.\output.csv'
 
 
 def main(argv):
     try:
-        vin_list = argv[1] if len(argv) > 1 else DEFAULT_INPUT_FILE
+        vins = argv[1] if len(argv) > 1 else DEFAULT_INPUT_FILE
         output = argv[2] if len(argv) > 2 else DEFAULT_OUTPUT_FILE
-        data = get_vin_details_batch(vin_list, BATCH_SIZE)
+        batch = argv[3] if len(argv) > 3 else DEFAULT_BATCH_SIZE 
+        data = get_vin_details_batch(vins, batch)
         data.to_csv(output, sep=',', header=True, index=False, 
             line_terminator='\n', encoding='UTF-8', quoting=csv.QUOTE_ALL)
     except ValueError as exception:
@@ -27,11 +27,11 @@ def get_vin_details_batch(input_file_path, batch_size):
         item_counter = 0
         api_param = ''
         input_vins_count = vins[0].count()
-        output_data = pd.DataFrame()
+        output_data = pd.DataFrame() 
         for index, row in vins.iterrows():
             api_param += str(row[0]) + "," + str(row[1]) + ";"
-            item_counter = item_counter + 1
-            if item_counter == batch_size or index == input_vins_count:
+            item_counter += 1
+            if item_counter == batch_size or index == input_vins_count: 
                 post_fields = {'format': 'json', 'data': api_param}
                 api_call_result = rq.post(NHTSA_API_URL, data=post_fields)
                 tmp = api_call_result.text.replace('\\u000d\\u000a', '').replace('\\u000a', '').replace('\\u000d', '')
