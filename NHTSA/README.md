@@ -20,10 +20,10 @@ A simple script using [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to deco
 
 
 ## Script Usage
-python3 nhtsa_lookup.py input_file_path.csv output_file_path.csv batch_size_int 
+python3 nhtsa_lookup.py input_file_path.csv output_file_path.csv batch_size 
 
 
 ### Defaults
-- Input File Path: \\.input.csv
-- Output File Path: \\.output.csv
-- Batch Size: 10
+- input_file_path:    \\.input.csv
+- output_file_path:    \\.output.csv
+- batch_size_int: 10
