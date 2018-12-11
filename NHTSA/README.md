@@ -1,7 +1,7 @@
 ## NHTSA Lookup
-A simple script using [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to decode a (*.csv) file containing a list of VINs into an output (*.csv) file composed of the latest NHTSA attributes (UTF-8 character encoding).
+A simple script using [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to decode *.csv containing a list of VINs into a *.csv with the latest NHTSA attributes (UTF-8 format).
 
-### Input file structure:
+### Input file
 - *.csv
 - no header
 - columns: vin#, model year
@@ -13,14 +13,14 @@ A simple script using [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to deco
 | 1GCRCREA2BZ230013 | 2016
 | 1J4PN2GK0BW516677 | 2016
 
-### Output file structure:
+### Output file
 - *.csv
-- header
+- header (column list)
 - columns: 150+ (the latest definition)
 
 
 ## Script Usage
-python3 nhtsa_lookup.py input_file_path.csv output_file_path.csv batch_size 
+python nhtsa_lookup.py input_file_path.csv output_file_path.csv batch_size
 
 
 ### Defaults
