@@ -3,7 +3,7 @@ A simple script that breaks a *.txt that's {delimiter}{file_name.txt} line-delim
 
 
 ## Script Usage
-python parser.py input_file_path.txt delimiter
+python parser.py input_file_path.txt [delimiter]
 
 ### Defaults
 - input_file_path: \\.input.csv
