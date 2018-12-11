@@ -4,7 +4,7 @@ import requests as rq
 
 
 NHTSA_API_URL = 'https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/'
-DEFAULT_BATCH_SIZE = 5
+DEFAULT_BATCH_SIZE = 10
 DEFAULT_INPUT_FILE = r'.\input.csv'
 DEFAULT_OUTPUT_FILE = r'.\output.csv'
 
@@ -13,9 +13,9 @@ def main(argv):
     try:
         input_file = argv[1] if len(argv) > 1 else DEFAULT_INPUT_FILE
         output_file = argv[2] if len(argv) > 2 else DEFAULT_OUTPUT_FILE
-        batch = argv[3] if len(argv) > 3 else DEFAULT_BATCH_SIZE 
+        batch = argv[3] if len(argv) > 3 else DEFAULT_BATCH_SIZE
         data = get_vin_details_batch(input_file, batch)
-        data.to_csv(output_file, sep=',', header=True, index=False, 
+        data.to_csv(output_file, sep=',', header=True, index=False,
             line_terminator='\n', encoding='UTF-8', quoting=csv.QUOTE_ALL)
     except ValueError as exception:
         print(exception)
