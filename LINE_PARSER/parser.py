@@ -2,13 +2,15 @@ import sys
 
 
 DEFAULT_INPUT_FILE = r'.\input.txt'
+DEFAULT_DELIMITER = r"--***"
 
 
 def main(argv):
     try:
         input_file = argv[1] if len(argv) > 1 else DEFAULT_INPUT_FILE
+        delimiter = argv[2] if len(argv) > 2 else DEFAULT_DELIMITER
         with open(input_file, "r") as input_file:
-            data = input_file.read().split("--***")
+            data = input_file.read().split(delimiter)
             i = 1
             while i < len(data): 
                 file_lines = data[i].split('\n') 
