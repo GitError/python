@@ -1,5 +1,5 @@
 ## NHTSA Lookup
-A simple script using [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to decode *.csv containing a list of VINs into a *.csv with the latest NHTSA attributes (UTF-8 format).
+A simple script using [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to decode *.csv containing a list of VINs into a *.csv with the latest NHTSA attributes (UTF-8 format)
 
 ### Input file
 - *.csv

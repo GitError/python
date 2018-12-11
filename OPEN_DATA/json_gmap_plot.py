@@ -1,5 +1,4 @@
-import sys
-import gmplot
+import sys, gmplot
 import pandas as pd
 
 
@@ -10,8 +9,7 @@ def main(argv):
     try:
         input_file = argv[1] if len(argv) > 1 else DEFAULT_DATASET 
         bike_data = pd.read_json(input_file)
-
-        # TODO: object with more props + map a pin instead of a shape
+        
         latitude = []
         longitude = []
 
@@ -19,7 +17,7 @@ def main(argv):
             latitude.append(row['features']['properties']['Lat'])
             longitude.append(row['features']['properties']['Long'])
 
-        # Place map; TODO: make it variable/ script argument
+        # Place map
         gmap = gmplot.GoogleMapPlotter(43.70011, -79.4163, 13)
 
         # Scatter points
