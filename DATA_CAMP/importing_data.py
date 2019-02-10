@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 import scipy.io
 from sas7bdat import SAS7BDAT
+from sqlalchemy import create_engine
 
 # --------------------------------------------------------
 # Flat Files - Python I/O
@@ -123,14 +124,22 @@ def import_hdf5_file(file_path):
 
 def import_matlab_file(file_path):
     """ import content of a MATLAB file """
-    #return scipy.io.loadmat(file_path)
+    # return scipy.io.loadmat(file_path)
     pass
 
 
 # --------------------------------------------------------
-# Databases - Relational
+# Relational Databases - SQLite
 # --------------------------------------------------------
 
+
+def query_sqlite(con_str, sql):
+    engine = create_engine('sqlite:///'+con_str)
+    con = engine.connectr()
+    rs = con.execute(sql)
+    data = pd.DataFrame(rs.fetchall())
+    con.close()
+    return data
 
 
 # --------------------------------------------------------
