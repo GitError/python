@@ -19,17 +19,15 @@ def main(argv):
     try:
         input_file = argv[1] if len(argv) > 1 else d_input_file
         output_file = argv[2] if len(argv) > 2 else d_output_file
-        batch = argv[3] if len(argv) > 3 else d_batch_size
-
-        data = get_vin_details_batch(input_file, batch)
+        batch_size = argv[3] if len(argv) > 3 else d_batch_size
+        data = get_vin_details_batch(input_file, batch_size)
         data.to_csv(output_file, sep=',', header=True, index=False,
                     line_terminator='\n', encoding='UTF-8', quoting=csv.QUOTE_ALL)
-
     except ValueError as exception:
         print(exception)
 
 
-def get_vin_details_batch(input_file_path, batch_size):
+def get_vin_details_batch(input_file_path=d_input_file, batch_size=d_batch_size):
     try:
         vins = pd.read_csv(input_file_path, header=None)
         item_counter = 0
