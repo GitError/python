@@ -124,8 +124,7 @@ def import_hdf5_file(file_path):
 
 def import_matlab_file(file_path):
     """ import content of a MATLAB file """
-    # return scipy.io.loadmat(file_path)
-    pass
+    return scipy.io.loadmat(file_path)
 
 
 # --------------------------------------------------------
@@ -133,14 +132,20 @@ def import_matlab_file(file_path):
 # --------------------------------------------------------
 
 
-def query_sqlite(con_str, sql):
+def query_sqlite(con_str, sql_query):
     engine = create_engine('sqlite:///'+con_str)
     con = engine.connectr()
-    rs = con.execute(sql)
-    data = pd.DataFrame(rs.fetchall())
+    rs = con.execute(sql_query)
+    df = pd.DataFrame(rs.fetchall())
+    df.columns = rs.keys()
     con.close()
-    return data
+    return df
 
+
+def query_sqlite_pd(con_str, sql_query):
+    engine = create_engine('sqlite:///'+con_str)
+    df = pd.read_sql_query(sql_query, engine)
+    return df
 
 # --------------------------------------------------------
 # Other Helpers

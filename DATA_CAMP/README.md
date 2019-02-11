@@ -9,7 +9,7 @@ Modules:
     - [x] Python Data Science Toolbox (Part 1)
     - [x] Python Data Science Toolbox (Part 2)
     - [x] Importing Data in Python (Part 1)
-    - [] Importing Data in Python (Part 2)
+    - [~] Importing Data in Python (Part 2)
     - [] Cleaning Data in Python
     - [] pandas Foundations
     - [] Manipulating DataFrames with pandas
@@ -20,10 +20,9 @@ Modules:
     - [] Interactive Data Visualization with Bokeh
     - [] Statistical Thinking in Python (Part 1)
     - [] Statistical Thinking in Python (Part 2)
-    - [] Joining Data in SQL
+    - [~] Joining Data in SQL
     - [] Supervised Learning with scikit-learn
     - [] Machine Learning with the Experts: School Budgets
     - [] Unsupervised Learning in Python
     - [] Deep Learning in Python
     - [] Network Analysis in Python (Part 1)
-
