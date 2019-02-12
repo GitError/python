@@ -1,4 +1,4 @@
-""" DataCamp - Importing  Data in Python Part 1 (up to sql) and Part 2 (from web files) """
+""" DataCamp - Importing  Data in Python Part 1 and 2 code snippets """
 
 import json
 import pickle
@@ -100,14 +100,14 @@ def import_excel_worksheet_df(file_path, worksheet, skiprows=None):
 # --------------------------------------------------------
 
 
-def import_sas_file(file_path):
+def import_sas_file_df(file_path):
     """ import content of a sas file as a pandas DataFrame """
     with SAS7BDAT(file_path) as file:
         df = file.to_data_frame()
     return df
 
 
-def import_dta_file(file_path):
+def import_dta_file_df(file_path):
     """ import content of a stata file as a pandas DataFrame """
     return pd.read_stata(file_path)
 
@@ -128,14 +128,14 @@ def import_hdf5_file(file_path):
 def import_matlab_file(file_path):
     """ import content of a MATLAB file """
     # return scipy.io.loadmat(file_path) - LINT ISSUE?
-    pass 
+    pass
 
 # --------------------------------------------------------
 # Relational Databases - SQLite
 # --------------------------------------------------------
 
 
-def query_sqlite(con_str, sql_query):
+def query_sqlite_df1(con_str, sql_query):
     """ import result of a sql query as a pandas DataFrame, long """
     engine = create_engine('sqlite:///'+con_str)
     con = engine.connectr()
@@ -146,7 +146,7 @@ def query_sqlite(con_str, sql_query):
     return df
 
 
-def query_sqlite_df(con_str, sql_query):
+def query_sqlite_df2(con_str, sql_query):
     """ import result of a sql query as a pandas DataFrame, short """
     engine = create_engine('sqlite:///'+con_str)
     return pd.read_sql_query(sql_query, engine)
@@ -156,17 +156,17 @@ def query_sqlite_df(con_str, sql_query):
 # --------------------------------------------------------
 
 
-def import_and_save_web_df(url, local_file_path):
+def import_and_save_web_file_df(url, local_file_path):
     """ import web (csv) file locally and as a pandas DataFrame """
     return pd.DataFrame(urlretrieve(url, local_file_path))
 
 
-def import_web_df(url, delimiter):
+def import_web_file_df(url, delimiter):
     """ import web (delimited) file as a pandas DataFrame """
     return pd.DataFrame(pd.read_csv(url, sep=delimiter))
 
 
-def import_web_excel_df(url):
+def import_web_excel_file_df(url):
     """ import web excel file as a pandas DataFrame """
     return pd.DataFrame(pd.read_excel(url, sheetname=None))
 
@@ -176,22 +176,22 @@ def import_web_excel_worksheet_df(url, sheetname):
     return pd.DataFrame(pd.read_excel(url, sheetname=None)[sheetname])
 
 
-def import_request_txt(url):
+def import_from_url_html(url):
     """ import html from a web  request """
     return requests.get(url)
 
 
-def import_request_html(url):
+def import_from_url_html_fortammed(url):
     """ import html from a web request """
     return BeautifulSoup(requests.get(url).text).prettify()
 
 
-def import_request_text(url):
+def import_from_url_clean_text(url):
     """ import clean text from a web request """
     return BeautifulSoup(requests.get(url).text).get_text()
 
 
-def import_request_text_urls(url):
+def import_from_url_text_links(url):
     """ import links (as a text) from a web request """
     return BeautifulSoup(requests.get(url).text).find_all('a').get('href')
 
@@ -200,3 +200,5 @@ def import_request_text_urls(url):
 # --------------------------------------------------------
 
 
+def import_from_url_json(url):
+    return requests.get(url).json()
