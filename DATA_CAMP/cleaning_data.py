@@ -37,9 +37,18 @@ print(df.describe())
 # Visualizing Data - spotting outliers
 # --------------------------------------
 
-# Basics
+# Visualization 101
 # 1. Bar plots for discrete data counts
 # 2. Histograms for continuous data counts
+# 3. Box plots - visualize basic summary statistics
+# 4. Scatter plots - find relationship between 2 numeric variables
 
 df.price.plot('hist')
 plt.show()
+
+# slicing data - using list comprehensions
+df[df.price > 100000]
+
+df.boxplot(column="price", by="city")
+plt.show()
+
