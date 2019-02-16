@@ -16,7 +16,17 @@ import matplotlib.pyplot as plt
 # df.columns = list_labels
 
 # broadcasting - setting a value to an entire column 
-cities = ['Toronto', 'Ottawa'] 
-data = {'state':'ON', 'city':cities}
+cities = ['Toronto', 'Ottawa']
+counts = [662,458]
+counts2 = [115,458]
+data = {'state':'ON', 'city':cities, 'stat': counts, 'stat2': counts2}
 df = pd.DataFrame(data) 
 print(df.head())
+
+# plotting data 
+# line plot -- default -- not too useful 
+df.plot(color='red') 
+plt.title('title')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
