@@ -1,26 +1,49 @@
 """ DataCamp - code snippets and notes from foundation courses """
 
+import glob
 import json
 import os
+import re
 
 import tweepy
-
-# --------------------------------------------------------
-# List comprehensions
-# --------------------------------------------------------
-
-
-num_list = [num ** 2 for num in range(1000) if num % 2 == 0]
-print(num_list)
 
 # --------------------------------------------------------
 # OS
 # --------------------------------------------------------
 
+# list files in the working directory
+
 
 def list_files_in_wd():
     """ list all files in the working directory """
     print(os.listdir(os.getcwd()))
+
+
+# Globbing = pattern matching for file names
+#            wildcards are allowed e.g. *.csv  e.g.
+
+csv_files = glob.glob('*.csv')
+
+# RegEx
+# 17 = \d   $17 = \$\d*  $17.00 = \$\d*\.\d*  or \$\d*\.\{2}d*
+pattern1 = re.compile('\$\d*\.\d{2}')
+result = pattern1.match('$17.89')
+print(bool(result))
+
+# find the numeric values: matches
+pattern2 = re.findall(
+    '\d+', 'the recipe calls for 10 strawberries and 1 banana')
+print(pattern2)
+
+pattern3 = bool(re.match(pattern='[A-Z\w*]', string='Australia'))
+print(pattern3)
+
+# --------------------------------------------------------
+# List comprehensions
+# --------------------------------------------------------
+
+num_list = [num ** 2 for num in range(1000) if num % 2 == 0]
+print(num_list)
 
 # --------------------------------------------------------
 # Twitter WebAPI

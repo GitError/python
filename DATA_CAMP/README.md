@@ -10,8 +10,8 @@ Modules:
     - [x] Python Data Science Toolbox (Part 2)
     - [x] Importing Data in Python (Part 1)
     - [x] Importing Data in Python (Part 2)
-    - [~] Cleaning Data in Python
-    - [] pandas Foundations
+    - [x] Cleaning Data in Python
+    - [~] Pandas Foundations
     - [] Manipulating DataFrames with pandas
     - [] Merging DataFrames with pandas
     - [x] Intro to SQL for Data Science

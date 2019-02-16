@@ -1,6 +1,9 @@
 """ DataCamp - Diagnose data for cleaning code snippets """
 
+import glob
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 # --------------------------------
@@ -49,6 +52,71 @@ plt.show()
 # slicing data - using list comprehensions
 df[df.price > 100000]
 
+# box plot is for numeric value over some categories
+# e.g. real estate price by city
 df.boxplot(column="price", by="city")
 plt.show()
 
+# scatter plot are ideal for visualizing two numeric columns
+df.plot(kind='scatter', x='initial_cost', y='total_est_fee', rot=70)
+plt.show()
+
+# --------------------------------
+# Tidy Data
+# --------------------------------
+
+# formalizes thw way we describe the shape of data
+# gives us a goal when formatting our data
+# standard way to organize data values withing a dataset
+#   1. columns represent separate variables
+#   2. rows represent individual observations
+#   3. observational units from tables
+# tidy data makes it easier to fix common data problems
+# pl.melt() - convert columns into variables -- make it untidy
+# melting data is the process of turning columns into rows
+# not always a good idea to do this...
+
+pd.melt(df, id_vars=['Month', 'Day'],
+        var_name='measurement', value_name='reading')
+
+# pivoting - opposite to melting i.e. turning rows into columns
+#            turning unique rows into columns dataset.pivot()
+# pivot table - has a way to deal with duplicate data points as regular pivot would fail
+
+# turn column measurement and value into pivot table [columns], multi-index;
+pivot_dataset = df.pivot_table(
+    index=['Month', 'Day'], columns='measurement', values='reading')
+
+# pivoting gives hierarchical index aka multi index data frame; to turn it back to original df use reset_index()
+
+# pivot with aggregate function - np.mean to get rid of duplicates
+pivot_dataset2 = df.pivot_table(
+    index=['Month', 'Day'], columns='measurement', values='reading', aggfunc=np.mean)
+
+# extracting columns by slicing
+pivot_dataset2['gender'] = pivot_dataset2.variable.str[0]
+pivot_dataset2['age_group'] = pivot_dataset2.variable.str[1:]
+
+# combining/ concatinating data sets
+# pandas concat i.e. pd.concat(set1, set 2) -- keep in mind that row index stays as per the original !!! multiple 0, 1,2,3 etc.
+# use ignore_index = true to reset index of the new dataframe
+# use axis=1 to concat columns of data, axis=0 for rows of data
+
+# merging data - similar to SQL merge
+# pd.merge(left=, right=, on=, left_on=, right_on=)   -- use on= or left_on= + right_on = to specify the keys
+# merge types: one to one, one-to-many, many-to-many (duplicate keys)
+
+site = pd.DataFrame()
+visited = pd.DataFrame()
+o2o = pd.merge(left=site, right=visited, left_on='name', right_on='site')
+
+# column type casting; e.g. categorical column/ variables reduce the size of the dataframe
+tips = pd.DataFrame()
+tips.sex = tips.sex.astype('category')
+
+# convert to numeric column
+# the 'total_bill' and 'tip' columns in this DataFrame are stored as object types because the string 'missing' is used in these columns to encode missing values.
+# by coercing the values into a numeric type, they become proper NaN values.
+pd.to_numeric(tips['total_bill'], errors='coerce')
+
+# applying functions to columns - pd.apply(function_name, axis=, pattern=)
