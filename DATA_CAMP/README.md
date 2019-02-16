@@ -11,7 +11,7 @@ Modules:
     - [x] Importing Data in Python (Part 1)
     - [x] Importing Data in Python (Part 2)
     - [x] Cleaning Data in Python
-    - [~] Pandas Foundations
+    - [~] pandas Foundations
     - [] Manipulating DataFrames with pandas
     - [] Merging DataFrames with pandas
     - [x] Intro to SQL for Data Science

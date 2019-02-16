@@ -1,4 +1,4 @@
-""" DataCamp - code snippets and notes from foundation courses """
+""" code snippets and notes from foundation courses """
 
 import glob
 import json

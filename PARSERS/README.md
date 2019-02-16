@@ -1,6 +1,6 @@
 # Line Parser
 
-A simple script that breaks a *.txt that's {delimiter}{file_name.txt} line-delimited into multiple *.txt files
+A simple script that breaks a *.txt that's line-delimited '{delimiter}{file_name.txt}' into multiple *.txt files
 
 ## Script Usage
 

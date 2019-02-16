@@ -1,4 +1,4 @@
-""" DataCamp - Diagnose data for cleaning code snippets """
+""" Diagnose data for cleaning code snippets """
 
 import glob
 
@@ -97,6 +97,9 @@ pivot_dataset2 = df.pivot_table(
 pivot_dataset2['gender'] = pivot_dataset2.variable.str[0]
 pivot_dataset2['age_group'] = pivot_dataset2.variable.str[1:]
 
+# checking data types 
+# df.dtypes then df[col].to_numeric() etc.
+
 # combining/ concatinating data sets
 # pandas concat i.e. pd.concat(set1, set 2) -- keep in mind that row index stays as per the original !!! multiple 0, 1,2,3 etc.
 # use ignore_index = true to reset index of the new dataframe
@@ -120,3 +123,33 @@ tips.sex = tips.sex.astype('category')
 pd.to_numeric(tips['total_bill'], errors='coerce')
 
 # applying functions to columns - pd.apply(function_name, axis=, pattern=)
+def decode_gender(gender):
+    if gender == 'Female':
+        return 0   
+    elif gender == 'Male':
+        return 1 
+    else:
+        return np.nan
+
+tips['decode'] = tips.sex.apply(decode_gender, )
+
+# or using lambda
+tips['decode-female'] = tips.sex.apply(lambda x: x.replace('Female', True) , )
+
+
+# --------------------------------
+# Missing Data
+# --------------------------------
+
+# df.into() -- gives basic info including missing values, data types etc.
+
+# dropping duplicates - df.drop_duplicates() 
+# NaN -- leave, drop or fill missing values
+# drop missing values in entire data frame df.dropna() -- dropping rows (be careful)
+# fill missing values by column - df[col].fillna('missing') --- can be applied to multiples col @ once 
+# fill missing values with statistical data (instead of 0s) etc.
+
+# testing with assert() -- takes a predicate and evaluates to a bool
+# e.g. assert pd.notnull(ebola).all().all() -- the first .all() method will return a True or False for each column, 
+#      while the second .all() method will return a single True or False.
+
