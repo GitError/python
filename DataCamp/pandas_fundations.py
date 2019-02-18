@@ -1,7 +1,7 @@
 """ pandas Foundations """
 
 import numpy as np
-import pandas as pd
+import pandas as pd 
 import matplotlib.pyplot as plt
 
 # pandas ia a library for data analysis
@@ -70,4 +70,16 @@ df.quantile([0.05, 0.95])
 
 # re-indexing + fillinf missing values
 # df.reindex(index=, method=) -- ffill forward fill OR bfill - backwards fill 
+
+# resampling data and applying rolling window calculations
+
+august = df['Temperature']['2010-08']
+daily_highs = august.resample('D').max()
+daily_highs_smoothed = daily_highs.rolling(window=7).mean()
+print(daily_highs_smoothed)
+
+
+# indexing
+# .loc - by label       e.g. df.loc[row_label, column_label]
+# .ilock - by index     e.g. df.loc[row_index, column_index]
 
