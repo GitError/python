@@ -82,4 +82,22 @@ print(daily_highs_smoothed)
 # indexing
 # .loc - by label       e.g. df.loc[row_label, column_label]
 # .ilock - by index     e.g. df.loc[row_index, column_index]
+ 
+election = pd.DataFrame(columns=['State', 'Total', 'Obama', 'Romney', 'Winner', 'Voters'])
+
+#          state   total      Obama     Romney  winner  voters    turnout     margin
+# county                                                                             
+# Adams        PA   41973  35.482334  63.112001  Romney   61156  68.632677  27.629667
+# Allegheny    PA  614671  56.640219  42.185820   Obama  924351  66.497575  14.454399
+# Armstrong    PA   28322  30.696985  67.901278  Romney   42147  67.198140  37.204293
+# Beaver       PA   80015  46.032619  52.637630  Romney  115157  69.483401   6.605012
+# Bedford      PA   21444  22.057452  76.986570  Romney   32189  66.619031  54.929118
+
+left_columns = election.loc[:, : 'Obama']
+print(left_columns.head())
+middle_columns = election.loc[:, 'Obama' : 'winner']
+print(middle_columns.head())
+right_columns = election.loc[:, 'Romney' : ]
+print(right_columns.head())
+
 
