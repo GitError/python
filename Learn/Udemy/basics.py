@@ -39,7 +39,7 @@ print(my_set)
 
 # file i/o
 # use context manager (with syntax) when using files so that it's properly 'disposed'
-with open('./Udemy/file.txt', 'r+') as f:
+with open('file.txt', 'r+') as f:
     print(f.readlines())
     f.write('\n\n...some text...')
     print(f.readlines())
