@@ -24,7 +24,7 @@ Modules:
     - [] Interactive Data Visualization with Bokeh
     - [] Statistical Thinking in Python (Part 1)
     - [] Statistical Thinking in Python (Part 2)
-    - [x Joining Data in SQL
+    - [x] Joining Data in SQL
     - [] Supervised Learning with scikit-learn
     - [] Machine Learning with the Experts: School Budgets
     - [] Unsupervised Learning in Python
