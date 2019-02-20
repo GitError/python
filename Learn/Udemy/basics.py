@@ -1,4 +1,6 @@
-""" python 101 """
+""" this is a docstring; python 101 """
+
+from random import shuffle
 
 # strings - ordered sequence of characters
 my_str = 'hello'
@@ -16,9 +18,13 @@ list2.append(7)
 list2.pop(-1)   # default =-1 i.e. the last element
 print(list2)
 
-# list comprehension/ slicing
+# list slicing
 list3 = list2[1:]   # slice from 2nd element on
 print(list3)
+
+# list comprehension [ item_output expression for item_output in list ]
+# can also add if() front of item_output
+list4 = [x for x in range(100)]
 
 # dictionaries - mutable, unordered, unsorted, key-value pairs
 my_dict = {'key1': 'value1', 'key2': 'value2',
@@ -71,4 +77,28 @@ c = 0
 while c < 5:
     print(c)
     c += 1
+
+# enumerate(list) will create index, object in a for loop syntax
+# zip is combining lists together
+
+# inline operator
+'x' in ['x', 'y', 'z']  # evaluates to true
+
+# shuffle
+print(shuffle(list(9, 81, 2, 3)))
+
+# input() -- return value always a string
+
+# methods - functions build into objects e.g. 
+list4.append(96)
+
+# functions - 'statics'; 
+def function_name(param1, param2):
+    """
+    docstring: explaining function
+    input: desc
+    output: desc
+    """
+    return True
+
 
