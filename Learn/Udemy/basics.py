@@ -93,7 +93,7 @@ print(shuffle(list(9, 81, 2, 3)))
 list4.append(96)
 
 # functions - 'statics'; 
-def function_name(param1, param2):
+def function_name(param1, param2='default'):
     """
     docstring: explaining function
     input: desc
@@ -101,4 +101,31 @@ def function_name(param1, param2):
     """
     return True
 
+# inline if -- return true if a>b else False
 
+# *args     -- unlimited # of unnamed parameters    -- list
+# **kwargs  -- unlimited # of keyword arguments     -- dictionary
+
+# always use .lower() when comparing strings to cover all scenarios
+# str.capitalize() is the same as str[0].upper()
+
+# str.join() -- joins list with the string as a delimeter
+
+# abs() -- absolute value of a number
+
+# map() -- takes a function and a list and applies function on list elements
+my_num = [1,2,3,4,5,6]
+
+def square(num):
+    return num**2
+
+squares = list(map(square, my_num))
+
+# filter() -- takes a function and a list and applies function to the list
+for n in filter(square, my_num):
+    print(n)
+
+# lambdas -- same as in .net, anon in-line functions e.g. square
+lambda num: num**2
+
+# global variables -- use keyword global in front of variable name; avoid;
