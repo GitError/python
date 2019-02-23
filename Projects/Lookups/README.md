@@ -1,5 +1,7 @@
 # Lookups
 
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Python_3.7-1f425f.svg)](http://commonmark.org)
+
 ## nhtsa_lookup.py
 
 A simple script utilizing [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to decode a *.csv containing a list of VINs (+ optionally Model Year) into a *.csv with the latest NHTSA attributes (in UTF-8 format).

@@ -10,8 +10,7 @@ import pandas as pd
 # Inspecting pandas DataFrame
 # --------------------------------
 
-df = pd.read_csv(
-    'http://samplecsvs.s3.amazonaws.com/Sacramentorealestatetransactions.csv')
+df = pd.read_csv('http://samplecsvs.s3.amazonaws.com/Sacramentorealestatetransactions.csv')
 
 # top 5 and bottom 5 rows data sample
 df.head()

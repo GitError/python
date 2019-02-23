@@ -20,19 +20,20 @@ def list_files_in_wd():
 
 
 # Globbing = pattern matching for file names
-#            wildcards are allowed e.g. *.csv  e.g.
+#            wildcards allowed e.g. *.csv
 
 csv_files = glob.glob('*.csv')
 
 # RegEx
-# 17 = \d   $17 = \$\d*  $17.00 = \$\d*\.\d*  or \$\d*\.\{2}d*
+# 17 = \d   
+# $17 = \$\d*  $17.00 = \$\d*\.\d*  or \$\d*\.\{2}d*
+
 pattern1 = re.compile('\$\d*\.\d{2}')
 result = pattern1.match('$17.89')
 print(bool(result))
 
 # find the numeric values: matches
-pattern2 = re.findall(
-    '\d+', 'the recipe calls for 10 strawberries and 1 banana')
+pattern2 = re.findall('\d+', 'the recipe calls for 10 strawberries and 1 banana')
 print(pattern2)
 
 pattern3 = bool(re.match(pattern='[A-Z\w*]', string='Australia'))
@@ -48,7 +49,6 @@ print(num_list)
 # --------------------------------------------------------
 # Twitter WebAPI
 # --------------------------------------------------------
-
 
 class MyStreamListener(tweepy.StreamListener):
     def __init__(self, api=None):
@@ -68,6 +68,7 @@ class MyStreamListener(tweepy.StreamListener):
             return False
         self.file.close()
 
+# NEED REAL ACCOUNT !!!
 # OAuth authentication credentials in relevant variables
 #access_token = "1092294848-aHN7DcRP9B4VMTQIhwqOYiB14YkW92fFO8k8EPy"
 #access_token_secret = "X4dHmhPfaksHcQ7SCbmZa2oYBBVSD2g8uIHXsp5CTaksx"
