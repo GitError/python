@@ -1,2 +1,4 @@
-""" Learning materials from Pluralsight courses """
+'''
+Learning materials from Pluralsight courses
+'''
 

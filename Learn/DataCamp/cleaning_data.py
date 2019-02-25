@@ -1,4 +1,6 @@
-""" Diagnose data for cleaning code snippets """
+'''
+Diagnose data for cleaning code snippets
+'''
 
 import glob
 

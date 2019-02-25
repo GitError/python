@@ -1,10 +1,18 @@
-""" this is a docstring; python 101 """
+'''
+Python basics
+'''
 
 from random import shuffle
+import unittest
 
 # strings - ordered sequence of characters
 my_str = 'hello'
 print(my_str[2])
+
+# formatting strings 
+# 'string {}'.format(var list)
+# or string literals 
+# f'text {var}' 
 
 # booleans - true/ false;
 my_bool = False
@@ -129,3 +137,7 @@ for n in filter(square, my_num):
 lambda num: num**2
 
 # global variables -- use keyword global in front of variable name; avoid;
+
+# unittest - a built-in library; assert library; 
+# pylint - command line linter/ code analyzer (pep8 rules)
+

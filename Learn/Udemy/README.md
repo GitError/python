@@ -4,11 +4,10 @@ Courses:
 
     - [~] Complete Python Bootcamp: Go from zero to hero in Python 3
         - [x] Lecture 1-50  
-            - data types, lists (slicing, comprehension), dictionaries, sets, file i/o, comparison & logical operators, control statements
+            - data types, lists (slicing, comprehension), dictionaries, sets, file i/o, comparison & logical operators, control statements, methods and functions
             - basics.py
-        - [~] Lecture 50-100
-            - methods and functions, oop, modules and packages
-            - basics.py
-        - [] Lecture 100-150
-        - [] Lecture 150-180
-        - [] Lectures 180-2012
+        - [x] Lecture 50-75
+            - oop fundamentals, modules and packages, errors and exception handling
+            - oop.py, modules.py + ./modules_packages/
+        - [~] Lecture 100-150
+            - decorators, generators, advanced topics (more on python collections, oop, unit testing)

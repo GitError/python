@@ -1,4 +1,6 @@
-""" Decode a *.csv file containing a list of VIN# (+ optionally Model Year) into a *.csv with the latest NHTSA data attributes """
+'''
+Decode a *.csv file containing a list of VIN# (+ optionally Model Year) into a *.csv with the latest NHTSA data attributes
+'''
 
 import csv
 import json

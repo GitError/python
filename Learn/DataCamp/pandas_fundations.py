@@ -1,4 +1,6 @@
-""" pandas Foundations """
+'''
+Pandas foundations 
+'''
 
 import numpy as np
 import pandas as pd 

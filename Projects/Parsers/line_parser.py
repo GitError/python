@@ -1,3 +1,7 @@
+'''
+Parse line delimited text file {delimiter}{file_name.txt} into multiple files 
+'''
+
 import sys
 
 d_input = r'.\input.txt'
