@@ -30,15 +30,15 @@ csv_files = glob.glob('*.csv')
 # 17 = \d   
 # $17 = \$\d*  $17.00 = \$\d*\.\d*  or \$\d*\.\{2}d*
 
-pattern1 = re.compile('\$\d*\.\d{2}')
+pattern1 = re.compile(r'\$\d*\.\d{2}')
 result = pattern1.match('$17.89')
 print(bool(result))
 
 # find the numeric values: matches
-pattern2 = re.findall('\d+', 'the recipe calls for 10 strawberries and 1 banana')
+pattern2 = re.findall(r'\d+', 'the recipe calls for 10 strawberries and 1 banana')
 print(pattern2)
 
-pattern3 = bool(re.match(pattern='[A-Z\w*]', string='Australia'))
+pattern3 = bool(re.match(pattern=r'[A-Z\w*]', string='Australia'))
 print(pattern3)
 
 # --------------------------------------------------------
