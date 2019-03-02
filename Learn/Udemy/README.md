@@ -11,3 +11,4 @@ Courses:
             - oop.py, modules.py + ./modules_packages/
         - [~] Lecture 100-150
             - decorators, generators, advanced topics (more on python collections, oop, unit testing)
+            - decorators.py, generators.py, advanced.py
