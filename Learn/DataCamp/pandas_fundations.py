@@ -1,6 +1,6 @@
-'''
-Pandas foundations 
-'''
+"""
+Pandas foundations
+"""
 
 import numpy as np
 import pandas as pd 
@@ -73,7 +73,7 @@ df.quantile([0.05, 0.95])
 # re-indexing + fillinf missing values
 # df.reindex(index=, method=) -- ffill forward fill OR bfill - backwards fill 
 
-# resampling data and applying rolling window calculations
+# re sampling data and applying rolling window calculations
 
 august = df['Temperature']['2010-08']
 daily_highs = august.resample('D').max()

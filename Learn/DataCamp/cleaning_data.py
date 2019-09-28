@@ -1,6 +1,6 @@
-'''
+"""
 Diagnose data for cleaning code snippets
-'''
+"""
 
 import glob
 
@@ -31,7 +31,8 @@ df.info()
 # Exploratory Data Analysis
 # --------------------------------
 
-# frequency count [syntax --- df.column.value_counts() or ds[col_index or name].value_counts(); dropna=False -- countmissing values]
+# frequency count [syntax --- df.column.value_counts() or ds[col_index or name].value_counts(); dropna=False --
+# count missing values]
 print(df.city.value_counts(dropna=False))
 
 # summary statistics
@@ -101,10 +102,9 @@ pivot_dataset2['age_group'] = pivot_dataset2.variable.str[1:]
 # checking data types 
 # df.dtypes then df[col].to_numeric() etc.
 
-# combining/ concatinating data sets
-# pandas concat i.e. pd.concat(set1, set 2) -- keep in mind that row index stays as per the original !!! multiple 0, 1,2,3 etc.
-# use ignore_index = true to reset index of the new dataframe
-# use axis=1 to concat columns of data, axis=0 for rows of data
+# combining/ concatenating data sets pandas concat i.e. pd.concat(set1, set 2) -- keep in mind that row index stays
+# as per the original !!! multiple 0, 1,2,3 etc. use ignore_index = true to reset index of the new data frame use
+# axis=1 to concat columns of data, axis=0 for rows of data
 
 # merging data - similar to SQL merge
 # pd.merge(left=, right=, on=, left_on=, right_on=)   -- use on= or left_on= + right_on = to specify the keys
@@ -114,29 +114,30 @@ site = pd.DataFrame()
 visited = pd.DataFrame()
 o2o = pd.merge(left=site, right=visited, left_on='name', right_on='site')
 
-# column type casting; e.g. categorical column/ variables reduce the size of the dataframe
+# column type casting; e.g. categorical column/ variables reduce the size of the data frame
 tips = pd.DataFrame()
 tips.sex = tips.sex.astype('category')
 
-# convert to numeric column
-# the 'total_bill' and 'tip' columns in this DataFrame are stored as object types because the string 'missing' is used in these columns to encode missing values.
-# by coercing the values into a numeric type, they become proper NaN values.
+# convert to numeric column the 'total_bill' and 'tip' columns in this DataFrame are stored as object types because
+# the string 'missing' is used in these columns to encode missing values. by coercing the values into a numeric type,
+# they become proper NaN values.
 pd.to_numeric(tips['total_bill'], errors='coerce')
+
 
 # applying functions to columns - pd.apply(function_name, axis=, pattern=)
 def decode_gender(gender):
     if gender == 'Female':
-        return 0   
+        return 0
     elif gender == 'Male':
-        return 1 
+        return 1
     else:
         return np.nan
+
 
 tips['decode'] = tips.sex.apply(decode_gender, )
 
 # or using lambda
-tips['decode-female'] = tips.sex.apply(lambda x: x.replace('Female', True) , )
-
+tips['decode-female'] = tips.sex.apply(lambda x: x.replace('Female', True), )
 
 # --------------------------------
 # Missing Data
@@ -153,4 +154,3 @@ tips['decode-female'] = tips.sex.apply(lambda x: x.replace('Female', True) , )
 # testing with assert() -- takes a predicate and evaluates to a bool
 # e.g. assert pd.notnull(ebola).all().all() -- the first .all() method will return a True or False for each column, 
 #      while the second .all() method will return a single True or False.
-

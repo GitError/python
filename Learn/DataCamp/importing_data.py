@@ -1,20 +1,18 @@
-'''
+"""
 Importing  Data in Python Part 1 and 2 code snippets
-'''
+"""
 
-import json
 import pickle
-import sys
-from urllib.request import Request, urlopen, urlretrieve
+from urllib.request import urlretrieve
 
 import h5py
 import numpy as np
 import pandas as pd
 import requests
-import scipy.io
 from bs4 import BeautifulSoup
 from sas7bdat import SAS7BDAT
 from sqlalchemy import create_engine
+
 
 # --------------------------------------------------------
 # Flat Files - Python I/O
@@ -173,9 +171,9 @@ def import_web_excel_file_df(url):
     return pd.DataFrame(pd.read_excel(url, sheetname=None))
 
 
-def import_web_excel_worksheet_df(url, sheetname):
+def import_web_excel_worksheet_df(url, sheet_name):
     """ import web excel file (a single worksheet) as a pandas DataFrame """
-    return pd.DataFrame(pd.read_excel(url, sheetname=None)[sheetname])
+    return pd.DataFrame(pd.read_excel(url, sheetname=None)[sheet_name])
 
 
 def import_from_url_html(url):
@@ -183,7 +181,7 @@ def import_from_url_html(url):
     return requests.get(url)
 
 
-def import_from_url_html_fortammed(url):
+def import_from_url_html_formatted(url):
     """ import html from a web request """
     return BeautifulSoup(requests.get(url).text).prettify()
 

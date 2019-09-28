@@ -1,6 +1,6 @@
-'''
-Parse line delimited text file {delimiter}{file_name.txt} into multiple files 
-'''
+"""
+Parse line delimited text file {delimiter}{file_name.txt} into multiple files
+"""
 
 import sys
 

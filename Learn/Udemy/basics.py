@@ -1,6 +1,6 @@
-'''
+"""
 Python basics
-'''
+"""
 
 from random import shuffle
 import unittest
@@ -20,14 +20,12 @@ print(my_bool)
 
 # lists - sorted, ordered sequence of objects (mutable)
 list1 = []
-list2 = ["one", 2, 3, 4, 5]
-list2.append(6)
-list2.append(7)
-list2.pop(-1)   # default =-1 i.e. the last element
+list2 = ["one", 2, 3, 4, 5, 6, 7]
+list2.pop(-1)  # default =-1 i.e. the last element
 print(list2)
 
 # list slicing
-list3 = list2[1:]   # slice from 2nd element on
+list3 = list2[1:]  # slice from 2nd element on
 print(list3)
 
 # list comprehension [ item_output expression for item_output in list ]
@@ -65,7 +63,7 @@ print(not True == False or False != True)
 # control statements
 # range() -- range(start, stop[, steps])  -- default = range(stop, step=1)
 for item in range(100):
-    if(item % 12 == 0):
+    if item % 12 == 0:
         print(item)
     else:
         pass
@@ -78,7 +76,7 @@ for (a, b) in tup_list:
 # apply the same syntax on dictionaries
 
 # break -- breaks out of the current loop
-# continute -- skips iteration/ go to the top of the loop
+# continue -- skips iteration/ go to the top of the loop
 # pass -- do nothing
 
 c = 0
@@ -100,7 +98,8 @@ print(shuffle(list(9, 81, 2, 3)))
 # methods - functions build into objects e.g. 
 list4.append(96)
 
-# functions - 'statics'; 
+
+# functions - 'statics';
 def function_name(param1, param2='default'):
     """
     docstring: explaining function
@@ -108,6 +107,7 @@ def function_name(param1, param2='default'):
     output: desc
     """
     return True
+
 
 # inline if -- return true if a>b else False
 
@@ -122,10 +122,12 @@ def function_name(param1, param2='default'):
 # abs() -- absolute value of a number
 
 # map() -- takes a function and a list and applies function on list elements
-my_num = [1,2,3,4,5,6]
+my_num = [1, 2, 3, 4, 5, 6]
+
 
 def square(num):
-    return num**2
+    return num ** 2
+
 
 squares = list(map(square, my_num))
 
@@ -134,10 +136,9 @@ for n in filter(square, my_num):
     print(n)
 
 # lambdas -- same as in .net, anon in-line functions e.g. square
-lambda num: num**2
+lambda num: num ** 2
 
 # global variables -- use keyword global in front of variable name; avoid;
 
 # unittest - a built-in library; assert library; 
 # pylint - command line linter/ code analyzer (pep8 rules)
-

@@ -1,6 +1,6 @@
-'''
+"""
 Code snippets and notes from foundation courses
-'''
+"""
 
 import glob
 import json
@@ -8,6 +8,7 @@ import os
 import re
 
 import tweepy
+
 
 # --------------------------------------------------------
 # OS
@@ -48,6 +49,7 @@ print(pattern3)
 num_list = [num ** 2 for num in range(1000) if num % 2 == 0]
 print(num_list)
 
+
 # --------------------------------------------------------
 # Twitter WebAPI
 # --------------------------------------------------------
@@ -70,22 +72,23 @@ class MyStreamListener(tweepy.StreamListener):
             return False
         self.file.close()
 
+
 # NEED REAL ACCOUNT !!!
 # OAuth authentication credentials in relevant variables
-#access_token = "1092294848-aHN7DcRP9B4VMTQIhwqOYiB14YkW92fFO8k8EPy"
-#access_token_secret = "X4dHmhPfaksHcQ7SCbmZa2oYBBVSD2g8uIHXsp5CTaksx"
-#consumer_key = "nZ6EA0FxZ293SxGNg8g8aP0HM"
-#consumer_secret = "fJGEodwe3KiKUnsYJC3VRndj7jevVvXbK2D5EiJ2nehafRgA6i"
+# access_token = "1092294848-aHN7DcRP9B4VMTQIhwqOYiB14YkW92fFO8k8EPy"
+# access_token_secret = "X4dHmhPfaksHcQ7SCbmZa2oYBBVSD2g8uIHXsp5CTaksx"
+# consumer_key = "nZ6EA0FxZ293SxGNg8g8aP0HM"
+# consumer_secret = "fJGEodwe3KiKUnsYJC3VRndj7jevVvXbK2D5EiJ2nehafRgA6i"
 
 # Pass OAuth details to tweepy's OAuth handler
-#auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-#auth.set_access_token(access_token, access_token_secret)
+# auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+# auth.set_access_token(access_token, access_token_secret)
 
 # Initialize Stream listener
-#l = MyStreamListener()
+# l = MyStreamListener()
 
 # Create your Stream object with authentication
-#stream = tweepy.Stream(auth, l)
+# stream = tweepy.Stream(auth, l)
 
 # Filter Twitter Streams to capture data by the keywords:
-#stream.filter(track=['clinton', 'trump', 'sanders', 'cruz'])
+# stream.filter(track=['clinton', 'trump', 'sanders', 'cruz'])
