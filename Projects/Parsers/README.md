@@ -18,7 +18,7 @@ python split_file_into_multiple_by_delimiter.py input_file_path.txt [delimiter]
 
 ## split_file_into_multiple_by_lines.py
 
-A simple script that breaks a *.txt into into multiple *.txt files based on a batch size (# of lines) with output file names as InputFileName_BatchNumber.txt
+A simple script that breaks a *.txt into into multiple *.txt files based on a batch size (# of lines) with output file names as {input_file_name}{_batch_number.txt}
 
 ### Script Usage
 
