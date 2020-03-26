@@ -4,14 +4,11 @@ Parse line delimited text file {delimiter}{file_name.txt} into multiple files
 
 import sys
 
-d_input = r'.\input.txt'
-d_delimiter = r"--***"
-
 
 def main(argv):
     try:
-        input_file = argv[1] if len(argv) > 1 else d_input
-        delimiter = argv[2] if len(argv) > 2 else d_delimiter
+        input_file = argv[1] if len(argv) > 1 else r'.\input.txt'
+        delimiter = argv[2] if len(argv) > 2 else r"--***"
 
         with open(input_file, "r") as input_file:
             data = input_file.read().split(delimiter)
