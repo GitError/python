@@ -9,7 +9,7 @@ import os
 import pandas as pd
 import tkinter as tk
 from tkinter import filedialog
- 
+
 
 def main(argv):
     try:
@@ -21,10 +21,10 @@ def main(argv):
         input_file_name = filedialog.askopenfilename(initialdir = ".") 
         
         # Pandas Excel writer using XlsxWriter as the engine
-        writer = pd.ExcelWriter(input_file_name[:-4] + ".xlsx", engine='xlsxwriter')
+        writer = pd.ExcelWriter(input_file_name[:-4] + ".xlsx", engine='xlsxwriter', datetime_format='dd/mm/yy hh:mm')
 
         # Get data and create the Excel file
-        df = pd.read_csv(input_file_name) 
+        df = pd.read_csv(input_file_name)
         df.to_excel(writer, index = False) 
 
         # Format worksheet
@@ -33,10 +33,10 @@ def main(argv):
         worksheet.freeze_panes(1, 1)
         
         num_format = workbook.add_format({'num_format': '#,###'})
-        date_format = workbook.add_format({'num_format': 'D:HH:MM'})
+        cus_format = workbook.add_format({'num_format': 'd:hh:mm'})
 
         worksheet.set_column('I:Q', None, num_format)
-        worksheet.set_column('F:H', None, date_format)
+        worksheet.set_column('F:H', None, cus_format)
 
         # Auto fit columns 
         for idx, col in enumerate(df):  # loop through all columns

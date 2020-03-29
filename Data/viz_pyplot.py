@@ -19,4 +19,3 @@ plt.title('title')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
-

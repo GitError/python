@@ -10,5 +10,4 @@ Default file path = script location, stopping run = keyboard interrupt
 ## watcher.py
 
 Folder listener/ watcher transferring input files to their destinations based on a naming pattern
-e.g. id_name_timestamp -> match file details and transfer it over to its destination 
-
+e.g. id_name_timestamp -> match file details and transfer it over to its destination
