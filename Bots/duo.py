@@ -10,7 +10,7 @@ import translations as tr
 import sys
 import selenium
 
-
+ 
 # setup
 fp = webdriver.FirefoxProfile()
 fp.set_preference("webdriver.load.strategy", "unstable")
