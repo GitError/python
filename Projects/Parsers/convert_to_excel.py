@@ -14,10 +14,12 @@ from tkinter import filedialog
 def main(argv):
     try:
         # GUI select file dialog
-        input_file_name = filedialog.askopenfilename(initialdir = ".") 
         root = tk.Tk()
         root.withdraw()
 
+        # Promot for the file
+        input_file_name = filedialog.askopenfilename(initialdir = ".") 
+        
         # Pandas Excel writer using XlsxWriter as the engine
         writer = pd.ExcelWriter(input_file_name[:-4] + ".xlsx", engine='xlsxwriter')
 
