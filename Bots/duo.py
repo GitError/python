@@ -18,7 +18,7 @@ driver = webdriver.Firefox(firefox_profile=fp)
 
 
 def main(argv):
-    login('giterror', 'poomse$$')
+    login('username', 'pass')
     nav_story()
 
 
