@@ -12,6 +12,6 @@
 
 ## Study Notes
 
-- :link: [DataCamp - Python path](Learn/DataCamp/)
-- :link: [Udemy - Python Path](Learn/Udemy/)
-- :link: [PluralSight - Python path](Learn/Pluralsight/)
+- :link: [DataCamp - Python path](/Learn/DataCamp/)
+- :link: [Udemy - Python Path](/Learn/Udemy/)
+- :link: [PluralSight - Python path](/Learn/Pluralsight/)
