@@ -14,4 +14,4 @@
 
 - :link: [DataCamp - Python path](Learn/DataCamp/)
 - :link: [Udemy - Python Path](Learn/Udemy/)
-- :link: [Pluralsight - Python path](Learn/PluralSight/)
+- :link: [PluralSight - Python path](Learn/Pluralsight/)
