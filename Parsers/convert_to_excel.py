@@ -33,7 +33,10 @@ def main(argv):
         worksheet.freeze_panes(1, 1)
         
         num_format = workbook.add_format({'num_format': '#,###'})
-        cus_format = workbook.add_format({'num_format': 'd:hh:mm'})
+        cus_format = workbook.add_format({'num_format': 'd:hh:mm'}) 
+        
+        # note: 4/3/2020
+        # d:hh:mm won't work -- non standard time format; write lambda parser
 
         worksheet.set_column('I:Q', None, num_format)
         worksheet.set_column('F:H', None, cus_format)

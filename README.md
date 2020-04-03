@@ -5,8 +5,10 @@
 ## Scripts
 
 - :link: [Parsers](/Parsers/)  
-- :link: [Holdings](/Lookups/)
-- :link: [Holdings](/Listeners/)
+- :link: [Lookups](/Lookups/)
+- :link: [Listeners](/Listeners/)
+- :link: [Data](/Data/)
+- :link: [Machine Learning](/ML/)
 
 ## Study Notes
 
