@@ -12,7 +12,7 @@ Split a *.txt that's line-delimited '{delimiter}{file_name.txt}' into multiple *
 
 python split_by_delimiter.py file_path.txt [delimiter]
 
-#### Defaults :small_blue_diamond:
+#### Defaults
 
 - input_file_path: \\.input.csv
 - delimiter: --\*\*\*{file_name.txt}
@@ -26,7 +26,7 @@ Split a *.txt into into multiple *.txt files based on a batch size (# of lines) 
 
 python split_file_into_multiple_by_line.py file_path.txt [batch_size]
 
-#### Defaults :small_blue_diamond:
+#### Defaults
 
 - input_file_path: \\.big.txt
 - batch size: 50,000
@@ -40,7 +40,7 @@ A simple script that prompts used to select a log file and converts it to nicely
 
 python convert_to_excel.py
 
-#### Dependencies :small_orange_diamond:
+#### Dependencies
 
 - tkinter -> packaging
 - pandas -> needs to be packaged with

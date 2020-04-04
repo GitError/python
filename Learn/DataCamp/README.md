@@ -24,11 +24,11 @@
 - :ballot_box_with_check: Introduction to Databases in Python
 - :ballot_box_with_check: Introduction to Data Visualization with Python
 - :ballot_box_with_check: Interactive Data Visualization with Bokeh
-- [] Statistical Thinking in Python (Part 1)
-- [] Statistical Thinking in Python (Part 2)
+- [ ] Statistical Thinking in Python (Part 1)
+- [ ] Statistical Thinking in Python (Part 2)
 - :ballot_box_with_check: Joining Data in SQL
 - :ballot_box_with_check: Supervised Learning with scikit-learn
 - :ballot_box_with_check: Machine Learning with the Experts: School Budgets
-- [] Unsupervised Learning in Python
-- [] Deep Learning in Python
-- [] Network Analysis in Python (Part 1)
+- [ ] Unsupervised Learning in Python
+- [ ] Deep Learning in Python
+- [ ] Network Analysis in Python (Part 1)
