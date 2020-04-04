@@ -8,7 +8,7 @@
 
 A simple script utilizing [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to decode a *.csv containing a list of VINs (+ optionally Model Year) into a *.csv with the latest NHTSA attributes (in UTF-8 format).
 
-#### Input file :arrow_up:
+#### Input file :small_blue_diamond:
 
 - *.csv
 - no header
@@ -20,13 +20,13 @@ A simple script utilizing [NHTSA Batch API](https://vpic.nhtsa.dot.gov/api/) to 
 | 1GCRCREA2BZ230013 | 2016
 | 1J4PN2GK0BW516677 | 2016
 
-#### Output file :arrow_down:
+#### Output file :small_blue_diamond:
 
 - *.csv
 - header (column name)
 - columns: 150+ (the latest definition)
 
-#### Script Usage :arrow_forward:
+#### Script Usage
 
 python nhtsa_lookup.py input_file_path.csv [output_file_path.csv] [batch_size]
 

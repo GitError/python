@@ -4,7 +4,7 @@
 
 ### Data Scientist Track - code snippets and course notes
 
-#### Modules
+### Modules
 
 - :ballot_box_with_check: Introduction to Python
 - :ballot_box_with_check: Intermediate Python for Data Science
@@ -18,7 +18,7 @@
     - [cleaning_data.py](cleaning_data.py)
 - :ballot_box_with_check: pandas Foundations
 - :ballot_box_with_check: Manipulating DataFrames with pandas
-    - [pandas_foundations.py](pandas_foundations.py)
+    - [pandas_fundations.py](pandas_fundations.py)
 - :ballot_box_with_check: Merging DataFrames with pandas
 - :ballot_box_with_check: Intro to SQL for Data Science
 - :ballot_box_with_check: Introduction to Databases in Python
@@ -27,8 +27,8 @@
 - [] Statistical Thinking in Python (Part 1)
 - [] Statistical Thinking in Python (Part 2)
 - :ballot_box_with_check: Joining Data in SQL
-- [] Supervised Learning with scikit-learn
-- [] Machine Learning with the Experts: School Budgets
+- :ballot_box_with_check: Supervised Learning with scikit-learn
+- :ballot_box_with_check: Machine Learning with the Experts: School Budgets
 - [] Unsupervised Learning in Python
 - [] Deep Learning in Python
 - [] Network Analysis in Python (Part 1)

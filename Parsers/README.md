@@ -8,9 +8,9 @@
 
 Split a *.txt that's line-delimited '{delimiter}{file_name.txt}' into multiple *.txt files
 
-#### Script Usage :arrow_forward:
+#### Script Usage
 
-python split_by_delimiter.py file_path.txt [delimiter] 
+python split_by_delimiter.py file_path.txt [delimiter]
 
 #### Defaults :small_blue_diamond:
 
@@ -22,7 +22,7 @@ python split_by_delimiter.py file_path.txt [delimiter]
 
 Split a *.txt into into multiple *.txt files based on a batch size (# of lines) with output file names as {input_file_name}{_fragment_number.txt}
 
-### Script Usage :arrow_forward:
+#### Script Usage
 
 python split_file_into_multiple_by_line.py file_path.txt [batch_size]
 
@@ -36,7 +36,7 @@ python split_file_into_multiple_by_line.py file_path.txt [batch_size]
 
 A simple script that prompts used to select a log file and converts it to nicely formatted excel file.
 
-#### Script Usage :arrow_forward:
+#### Script Usage
 
 python convert_to_excel.py
 
