@@ -1,30 +1,32 @@
-# DataCamp - Data Scientist Track
+#  
 
-## Data Scientist Track - code snippets and course notes
+## DataCamp - Data Scientist Track
 
-Modules:
+### Data Scientist Track - code snippets and course notes
 
-- [x] Introduction to Python
-- [x] Intermediate Python for Data Science
-- [x] Python Data Science Toolbox (Part 1)
-- [x] Python Data Science Toolbox (Part 2)
-    - basics.py
-- [x] Importing Data in Python (Part 1)
-- [x] Importing Data in Python (Part 2)
-    - importing_data.py
-- [x] Cleaning Data in Python
-    - cleaning_data.py
-- [x] pandas Foundations
-- [~] Manipulating DataFrames with pandas
-    - pandas_foundations.py
-- [] Merging DataFrames with pandas
-- [x] Intro to SQL for Data Science
-- [] Introduction to Databases in Python
-- [] Introduction to Data Visualization with Python
-- [] Interactive Data Visualization with Bokeh
+#### Modules
+
+- :ballot_box_with_check: Introduction to Python
+- :ballot_box_with_check: Intermediate Python for Data Science
+- :ballot_box_with_check: Python Data Science Toolbox (Part 1)
+- :ballot_box_with_check: Python Data Science Toolbox (Part 2)
+    - [basics.py](basics.py)
+- :ballot_box_with_check: Importing Data in Python (Part 1)
+- :ballot_box_with_check: Importing Data in Python (Part 2)
+    - [importing_data.py](importing_data.py)
+- :ballot_box_with_check: Cleaning Data in Python
+    - [cleaning_data.py](cleaning_data.py)
+- :ballot_box_with_check: pandas Foundations
+- :ballot_box_with_check: Manipulating DataFrames with pandas
+    - [pandas_foundations.py](pandas_foundations.py)
+- :ballot_box_with_check: Merging DataFrames with pandas
+- :ballot_box_with_check: Intro to SQL for Data Science
+- :ballot_box_with_check: Introduction to Databases in Python
+- :ballot_box_with_check: Introduction to Data Visualization with Python
+- :ballot_box_with_check: Interactive Data Visualization with Bokeh
 - [] Statistical Thinking in Python (Part 1)
 - [] Statistical Thinking in Python (Part 2)
-- [x] Joining Data in SQL
+- :ballot_box_with_check: Joining Data in SQL
 - [] Supervised Learning with scikit-learn
 - [] Machine Learning with the Experts: School Budgets
 - [] Unsupervised Learning in Python
