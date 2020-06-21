@@ -12,7 +12,7 @@
 
 ## Study Notes
 
-- :link: [PluralSight](/Learn/Pluralsight/)
+- :link: [Udemy Path](/Learn/Udemy/)
 - :link: [LinkedIn](/Learn/LinkedIn/)
 - :link: [DataCamp Path](/Learn/DataCamp/)
-- :link: [Udemy Path](/Learn/Udemy/)
+- :link: [PluralSight](/Learn/Pluralsight/)
