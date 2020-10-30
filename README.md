@@ -9,6 +9,7 @@
 - :link: [Listeners](/Listeners/)
 - :link: [Data](/Data/)
 - :link: [Machine Learning](/ML/)
+- :link: [Small Projects](/Projects/)
 
 ## Study Notes
 
