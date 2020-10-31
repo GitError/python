@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-    "python.pythonPath": "/bin/python3",
-=======
     "python.pythonPath": "C:\\Python39\\python.exe",
->>>>>>> 47634ce1419dd0d3651eae0dc131512bf7f3a246
     "python.linting.pylintEnabled": true, 
 }
